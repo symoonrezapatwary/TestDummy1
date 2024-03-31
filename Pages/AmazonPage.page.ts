@@ -4,5 +4,6 @@ export default class AmazonPage{
     constructor(page:Page){
         this.page=page;
     }
+    
 
 }
