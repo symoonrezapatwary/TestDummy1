@@ -9,7 +9,7 @@ const testConfig =
       //Mail COnfigurations
       "FromMailaddress": "symoonrezapatwaryanik@gmail.com",
       "FromAddressPassword": "jwqtedxspnbbdknu",
-      "ToMailAddress": ["sabbir.of@gmail.com"],
+      "ToMailAddress": ["symoonrezapatwaryanik9@gmail.com"],
       "SlackWebhookURL": "",
       "MailServiceProvider": "Gmail",
       "MailNotification": "yes",
