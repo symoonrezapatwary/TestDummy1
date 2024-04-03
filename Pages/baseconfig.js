@@ -14,7 +14,7 @@ const testConfig =
       "MailServiceProvider": "Gmail",
       "MailNotification": "yes",
       "TeamsNotification": "yes",
-      "Githubreportlink": ""
+      "Githubreportlink": "https://symoonrezapatwary.github.io/TestDummy1/"
 }
 
 module.exports = { testConfig }

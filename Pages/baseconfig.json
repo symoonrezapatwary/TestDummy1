@@ -1,0 +1,14 @@
+{
+    "Project": "Aloompa UI Automation",
+    "Env":"Main",
+    "Language":"",
+    "elementFinderURL":"https://colorlib.com/etc/regform/colorlib-regform-36/",
+    "FromMailaddress": "symoonrezapatwaryanik9@gmail.com",
+    "FromAddressPassword": "yzwt anhj oqcc ilky",
+    "ToMailAddress": ["symoonrezapatwaryanik@gmail.com"],
+    "SlackWebhookURL": "",
+    "MailServiceProvider": "Gmail",
+    "MailNotification": "yes",
+    "TeamsNotification": "yes",
+    "Githubreportlink": "https://symoonrezapatwary.github.io/TestDummy1/"
+}
