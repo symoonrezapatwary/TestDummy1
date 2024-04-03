@@ -7,9 +7,9 @@ const testConfig =
       "Language":"",
       "elementFinderURL":"https://colorlib.com/etc/regform/colorlib-regform-36/",
       //Mail COnfigurations
-      "FromMailaddress": "symoonrezapatwaryanik@gmail.com",
-      "FromAddressPassword": "jwqtedxspnbbdknu",
-      "ToMailAddress": ["symoonrezapatwaryanik9@gmail.com"],
+      "FromMailaddress": "symoonrezapatwaryanik9@gmail.com",
+      "FromAddressPassword": "yzwt anhj oqcc ilky",
+      "ToMailAddress": ["symoonrezapatwaryanik@gmail.com"],
       "SlackWebhookURL": "",
       "MailServiceProvider": "Gmail",
       "MailNotification": "yes",
