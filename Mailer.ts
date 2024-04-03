@@ -186,30 +186,44 @@
 // }
 // export default mailSend;
 import * as nodemailer from 'nodemailer';
+import * as fs from 'fs';
 
-async function sendMail() {
-    // Create reusable transporter object using the default SMTP transport
-    let transporter = nodemailer.createTransport({
-        service: 'Gmail',
-        auth: {
-            user: 'symoonrezapatwaryanik9@gmail.com', // Your Gmail address
-            pass: 'yzwtanhjoqccilky' // Your Gmail password
-        }
-    });
+// Load JSON file containing email configuration
+const emailConfig = JSON.parse(fs.readFileSync('baseconfig.json', 'utf-8'));
 
-    // Setup email data with unicode symbols
-    let mailOptions = {
-        from: 'symoonrezapatwaryanik9@gmail.com', // sender address
-        to: 'symoonrezapatwaryanik@gmail.com', // list of receivers
-        subject: 'Test Email', // Subject line
-        text: 'This is a test email', // plain text body
-        html: '<b>This is a test email</b>' // html body
-    };
+// Create transporter
+const transporter = nodemailer.createTransport({
+    service: emailConfig.MailServiceProvider,
+    auth: {
+        user: emailConfig.FromMailaddress,
+        pass: emailConfig.FromAddressPassword
+    }
+});
 
-    // Send mail with defined transport object
-    let info = await transporter.sendMail(mailOptions);
+// Function to send email with attachment
+async function sendEmail() {
+    try {
+        // Define email options
+        const mailOptions = {
+            from: emailConfig.FromAddressPassword,
+            to: emailConfig.ToMailAddress,
+            subject: 'Test Report',
+            text: 'Please find attached the executed test report.',
+            attachments: [
+                {
+                    filename: 'test_report.pdf', // Change the filename and path as per your actual report
+                    path: 'C:/Users/User/Desktop/TestDummy/Reports' // Change the path as per your actual report
+                }
+            ]
+        };
 
-    console.log('Message sent: %s', info.messageId);
+        // Send email
+        const info = await transporter.sendMail(mailOptions);
+        console.log('Email sent: ', info.response);
+    } catch (error) {
+        console.error('Error occurred while sending email: ', error);
+    }
 }
 
-sendMail().catch(console.error);
+// Call the function to send email
+sendEmail();
