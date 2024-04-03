@@ -5,7 +5,7 @@ on:
   pull_request:
     branches: [ main, master ]
   schedule:
-    - cron: "0 23 * * *"  # Cron schedule to trigger workflow at a specific time
+    - cron: "0 24 * * *"  # Cron schedule to trigger workflow at a specific time
 jobs:
   test:
     timeout-minutes: 60
